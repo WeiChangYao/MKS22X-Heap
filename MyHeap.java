@@ -8,6 +8,13 @@ public class MyHeap{
 
   }
   private static void pushUp(int[]data,int index){}
-  public static void heapify(int[]){}
-  public static void heapsort(int[]){}
+  public static void heapify(int[]data){}
+  public static void heapsort(int[]data){}
+
+  public static void main(String[] args){
+    int[] cat = new int[]{1,2,3};
+    System.out.println(cat);
+    swap(cat,1,2);
+    System.out.println(cat);
+  }
 }
