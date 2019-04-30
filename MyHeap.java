@@ -5,6 +5,15 @@ public class MyHeap{
     data[indexTwo] = swapdata;
   }
   private static void pushDown(int[]data,int size,int index){
+    //why do i need size? to over
+    if(data[index] < data[index*2+1]){
+      swap(data,index,index*2+1);
+      //recursive?
+      pushDown(data,size,index*2+1)
+    }
+    if(data[index] < data[index*2+2]){
+      swap(data,index,index*2+2);
+    }
 
   }
   private static void pushUp(int[]data,int index){}
