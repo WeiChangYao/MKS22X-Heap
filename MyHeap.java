@@ -33,7 +33,25 @@ public class MyHeap{
     }*/
   }
   private static void pushUp(int[]data,int index){}
-  public static void heapify(int[]data){}
+  public static void heapify(int[]data){
+    heapifyHelp(data,data.length,0);
+  }
+    
+  public static void heapifyHelp(int[] data, int n, int i) { 
+    int max = i; 
+    int l = i*2 + 1;  
+    int r = i*2 + 2; 
+    if (l < n && data[l] > data[max]) 
+            max = l; 
+    if (r < n && data[r] > data[max])
+            max = r; 
+    if (max != i){ 
+       swap(data,i,max);
+       heapifyHelp(data, n, max); 
+    } 
+  } 
+  
+  
   public static void heapsort(int[]data){}
   
   public static String prin(int[] ary){
